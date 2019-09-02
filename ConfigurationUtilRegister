@@ -1,0 +1,9 @@
+	public void onEnable() {
+		final ConfigurationUtil configurationUtil = new ConfigurationUtil(this);
+
+		configurationUtil.createConfiguration("%datafolder%/config.yml");
+		configurationUtil.createConfiguration("%datafolder%/messages.yml");
+
+		final YamlConfiguration configYml = configurationUtil.getConfiguration("%datafolder%/config.yml");
+		final YamlConfiguration messagesYml = configurationUtil.getConfiguration("%datafolder%/messages.yml");
+	}
